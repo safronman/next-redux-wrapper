@@ -1,3 +1,15 @@
+# NEXTJS (13 ver) + RTK Query
+
+❗Если все сделали верно, то при переходе на роут **posts**, будет диспатчиться action c типом **_NEXT_REDUX_WRAPPER_HYDRATE_**
+
+❗Если типа нету, то откройте панель разработчика и откройте ее еще раз
+
+❗Основные изменения, которые нужно внести в код обозначил **TODO** в коде `**TODO X STEP**` 
+
+![localhost3000posts - Google Chrome](https://github.com/safronman/next-redux-wrapper/assets/23716264/56cec2c1-2e1d-40ea-8add-2a28b1d3a0ed)
+
+
+
 # Redux Toolkit TypeScript Example
 
 This example shows how to integrate Next.js with [Redux Toolkit](https://redux-toolkit.js.org).
