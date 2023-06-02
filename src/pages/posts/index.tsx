@@ -20,6 +20,7 @@ export const _getStaticProps: GetStaticProps<{ posts: PostType[] }> = async () =
 };
 
 export const getStaticProps = wrapper.getStaticProps(store => async () => {
+	// TODO 5 STEP
 	store.dispatch(getPosts.initiate());
 
 	await Promise.all(store.dispatch(getRunningQueriesThunk()));

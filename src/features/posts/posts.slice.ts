@@ -5,7 +5,7 @@ import { PostType } from '../../pages/posts';
 export const postsSlice = createApi({
 	reducerPath: 'posts',
 	baseQuery: fetchBaseQuery({baseUrl: 'https://jsonplaceholder.typicode.com/'}),
-	// TODO 4 STEP
+	// TODO 3 STEP
 	extractRehydrationInfo(action, {reducerPath}) {
 		if (action.type === HYDRATE) {
 			return action.payload[reducerPath]
@@ -23,5 +23,5 @@ export const postsSlice = createApi({
 export const {useGetPostsQuery, util: {getRunningQueriesThunk}} = postsSlice
 
 // export endpoints for use in SSR
-// TODO 5 STEP
+// TODO 4 STEP
 export const {getPosts} = postsSlice.endpoints;

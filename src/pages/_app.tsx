@@ -1,18 +1,19 @@
 import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import type {AppProps} from 'next/app'
 
-import { wrapper } from '../store'
+import {wrapper} from '../store'
+import {Provider} from "react-redux";
 
-function MyApp({Component, pageProps}: AppProps) {
-	return (
-		//  TODO 3 STEP - убрать Provider. Странное решение
-		// <Provider store={store}>
-		// 	<Component {...pageProps} />
-		// </Provider>
+function MyApp({Component, ...rest}: AppProps) {
+    //  TODO 2 STEP
+    const {store, props} = wrapper.useWrappedStore(rest);
 
-	<Component {...pageProps} />
-	)
+    return (
+        <Provider store={store}>
+            <Component {...props.pageProps} />
+        </Provider>
+    )
 }
 
-//  TODO 2 STEP
-export default wrapper.withRedux(MyApp)
+export default MyApp
+
