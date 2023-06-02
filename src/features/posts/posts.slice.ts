@@ -20,6 +20,7 @@ export const postsSlice = createApi({
 })
 
 // Export hooks for usage in functional components
+// TODO 6 STEP
 export const {useGetPostsQuery, util: {getRunningQueriesThunk}} = postsSlice
 
 // export endpoints for use in SSR
